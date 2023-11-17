@@ -1,0 +1,28 @@
+<h1>Logga in till appen</h1>
+
+<div class="container">
+  <div class="login-form">
+    <form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
+      <label for="exampleInputEmail1"></label><br>
+      <input type="email" formControlName="email" placeholder="Enter email" class="input-field"><br>
+      <!-- Visa felmeddelande om e-post är ogiltig -->
+      <div *ngIf="loginForm?.get('email')?.hasError('required') && loginForm?.get('email')?.touched" class="text-danger">
+        Email is required.
+      </div>
+      <div *ngIf="loginForm?.get('email')?.hasError('email') && loginForm?.get('email')?.touched" class="text-danger">
+        Invalid email format.
+      </div>
+      
+      
+      <label for="exampleInputPassword1"></label><br>
+      <input type="password" formControlName="password" placeholder="Password" class="input-field"><br>
+      <!-- Visa felmeddelande om lösenord är ogiltigt -->
+      <div *ngIf="loginForm?.get('password')?.hasError('required') && loginForm?.get('password')?.touched" class="text-danger">
+        Password is required.
+      </div>
+      
+      
+      <button type="submit">LOGGA IN</button>
+    </form>
+  </div>
+</div>

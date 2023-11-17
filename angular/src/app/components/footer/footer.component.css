@@ -1,0 +1,9 @@
+  .footer {
+    /* position: absolute; eller position: absolute; */
+    bottom: 0;
+    background-color: #1A6C06;
+    padding: 50px; 
+    color: #333;
+    text-align: center;
+    width: 100%;
+}

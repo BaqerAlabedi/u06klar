@@ -1,0 +1,6 @@
+/* Återställ margins och paddings till standardvärden för hela appen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

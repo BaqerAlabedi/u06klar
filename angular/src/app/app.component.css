@@ -1,0 +1,38 @@
+.navbar {
+  margin-bottom: 20px;
+  background-color: #1A6C06;
+  padding: 20px;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center; 
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+.navbar-brand, .navbar-toggler {
+  margin-right: auto; 
+}
+
+button{
+    background: #649A56;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    transition: background-color 0.3s; 
+    margin-left: 15px;
+}
+
+button:hover {
+  background-color: #D7CCC8; 
+}
+

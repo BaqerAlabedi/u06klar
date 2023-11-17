@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="content-wrapper">
+    <app-header></app-header>
+
+    <div class="input-container">
+      <input
+        type="text"
+        class="form-control"
+        #input
+        placeholder="Search Recipes"
+        [(ngModel)]="searchquery"
+      />
+      <button type="button" (click)="getRecipes()">
+        Sök alla recept som är möjligt
+      </button>
+    </div>
+    <div class="kryss-container">
+      <label> <input type="checkbox" [(ngModel)]="filterNuts" /> Nuts </label>
+      <label>
+        <input type="checkbox" [(ngModel)]="filterVegetarian" /> Vegetarian
+      </label>
+      <label>
+        <input type="checkbox" [(ngModel)]="filterGluten" /> Gluten
+      </label>
+    </div>
+    <div class="meal-type-buttons">
+      <button type="button" (click)="getDinnerRecipes()">middag recept</button>
+      <button type="button" (click)="getBreakfastRecipes()">
+        frukost recept
+      </button>
+      <button type="button" (click)="getLunchRecipes()">lunch recept</button>
+    </div>
+
+    <div class="recipe-card-container">
+      <article class="recipe-card" *ngFor="let recipe of allRecipes">
+        <h2 class="recipe-title">
+          <a
+            [routerLink]="'recipe/' + recipe.idref"
+            routerLinkActive="active"
+            >{{ recipe.label }}</a
+          >
+        </h2>
+        <p class="recipe-ingredients">Ingredients:</p>
+        <ul>
+          <li *ngFor="let ingredient of recipe.ingredientLines">
+            {{ ingredient }}
+          </li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</div>

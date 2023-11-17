@@ -1,0 +1,15 @@
+<a routerLink="/" routerLinkActive="active">Tillbaka</a>
+
+<div class="container">
+  <article>
+    <h3>{{ recipe.label }}</h3>
+    <img [src]="recipe.image" [alt]="recipe.label" />
+    <p>Ingredients:</p>
+    <ul>
+      <li *ngFor="let ingredient of recipe.ingredientLines">
+        {{ ingredient }}
+      </li>
+    </ul>
+  </article>
+</div>
+

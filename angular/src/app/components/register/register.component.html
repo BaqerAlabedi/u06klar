@@ -1,0 +1,15 @@
+<h1>skapa en konto och logga in</h1>
+
+<div class="box">
+    <form [formGroup]="regForm" (ngSubmit)="register()" novalidate>
+        <label for="exampleInputName1"></label><br>
+        <input type="email" formControlName="name" placeholder="Enter name" class="input-field"><br>
+        <label for="exampleInputEmail1"></label><br>
+        <input type="email" formControlName="email" placeholder="Enter email" class="input-field"><br>
+        <label for="exampleInputPassword1"></label><br>
+        <input type="password" formControlName="password" placeholder="Password" class="input-field"><br>
+        <label for="exampleInputPassword_Confirmation1"></label><br>
+        <input type="password" formControlName="password_confirmation" placeholder="Password Confirmation" class="input-field"><br>
+        <button type="submit">REGISTERA DIG</button>
+    </form>
+</div>

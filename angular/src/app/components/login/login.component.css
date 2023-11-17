@@ -1,0 +1,36 @@
+.container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  max-width: 400px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  background: #649A56;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 50px;
+  margin: 20px 0;
+  border: none;
+}
+
+
+h1 {
+  text-align: center;
+  color: #5ea360;
+}
